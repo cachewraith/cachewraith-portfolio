@@ -23,17 +23,17 @@ export function AnimatedSection({
   amount = 0.3,
 }: AnimatedSectionProps) {
   const directions = {
-    up: { y: 40, x: 0 },
-    down: { y: -40, x: 0 },
-    left: { x: 40, y: 0 },
-    right: { x: -40, y: 0 },
-    none: { x: 0, y: 0 },
+    up: { y: 40 },
+    down: { y: -40 },
+    left: { x: 40 },
+    right: { x: -40 },
+    none: {},
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0, ...directions[direction] }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      initial={{ ...directions[direction] }}
+      whileInView={{ x: 0, y: 0 }}
       viewport={{ once, amount }}
       transition={{
         duration,
@@ -66,9 +66,8 @@ export function StaggerContainer({
       whileInView="visible"
       viewport={{ once, amount: 0.2 }}
       variants={{
-        hidden: { opacity: 0 },
+        hidden: {},
         visible: {
-          opacity: 1,
           transition: {
             staggerChildren: staggerDelay,
             delayChildren: 0.1,
@@ -91,9 +90,8 @@ export function StaggerItem({ children, className }: StaggerItemProps) {
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 20 },
+        hidden: { y: 20 },
         visible: {
-          opacity: 1,
           y: 0,
           transition: {
             duration: 0.5,
