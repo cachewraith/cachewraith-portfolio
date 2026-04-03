@@ -50,6 +50,23 @@
   --animate-gradient: gradient-shift 8s ease infinite;
 }
 
+@layer base {
+  html {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+  
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+  
+  main {
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -83,8 +100,6 @@ html {
 }
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
   font-family: var(--font-sans);
   transition: background-color 300ms ease, color 300ms ease;
 }
