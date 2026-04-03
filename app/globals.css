@@ -29,8 +29,8 @@
   --glass-bg: rgba(30, 41, 59, 0.8);
 }
 
-/* Gradient Definitions */
-@theme inline {
+/* Define CSS custom properties for Tailwind */
+@theme {
   --color-bg-primary: var(--bg-primary);
   --color-bg-secondary: var(--bg-secondary);
   --color-text-primary: var(--text-primary);
@@ -41,13 +41,8 @@
   --color-border: var(--border-color);
   --color-card-bg: var(--card-bg);
   --color-glass-bg: var(--glass-bg);
-
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
-
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-pulse-slow: pulse-slow 4s ease-in-out infinite;
-  --animate-gradient: gradient-shift 8s ease infinite;
 }
 
 @layer base {
@@ -59,6 +54,7 @@
   body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
+    font-family: var(--font-sans);
   }
   
   main {
@@ -68,49 +64,33 @@
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
 @keyframes pulse-slow {
-  0%, 100% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.8;
-  }
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
 }
 
 @keyframes gradient-shift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-/* Base Styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-sans);
   transition: background-color 300ms ease, color 300ms ease;
 }
 
-/* Selection */
 ::selection {
   background-color: var(--accent-primary);
   color: white;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -129,7 +109,6 @@ body {
   background: var(--accent-primary);
 }
 
-/* Gradient Backgrounds */
 .gradient-primary {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
 }
@@ -142,7 +121,6 @@ body {
   background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.1), transparent);
 }
 
-/* Glass Effect */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
@@ -150,17 +128,13 @@ body {
   border: 1px solid var(--border-color);
 }
 
-/* Focus Visible */
 :focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
+  *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;

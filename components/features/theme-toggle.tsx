@@ -22,7 +22,11 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
 
   if (!mounted) {
     return (
-      <div className={cn("w-9 h-9", className)} />
+      <div className={cn("flex items-center gap-1", className)}>
+        <div className="p-2 rounded-lg text-text-secondary">
+          <Sun className="h-5 w-5" />
+        </div>
+      </div>
     );
   }
 
