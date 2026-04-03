@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CacheWraith Portfolio
+
+A stunning, modern Software Engineer portfolio built with Next.js 14, featuring ultra-modern design, smooth animations, and comprehensive security implementations.
+
+## Features
+
+### Design & UX
+- Ultra-modern aesthetic with gradient accents
+- Smooth micro-interactions and transitions
+- Glassmorphism and subtle blur effects
+- Animated backgrounds (floating particles, gradient meshes)
+- Smooth scroll animations with parallax effects
+- Theme toggle: Light / Dark / System
+- Fully responsive (Mobile, Tablet, Desktop)
+
+### Technical Stack
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript (Strict Mode)
+- **Styling**: Tailwind CSS v4
+- **Animations**: Framer Motion
+- **Theme Management**: next-themes
+- **Icons**: Lucide React
+- **Validation**: Zod
+
+### Security (OWASP Top 10)
+- Content Security Policy (CSP) with nonce
+- Security headers (X-Frame-Options, X-Content-Type-Options, etc.)
+- Input sanitization and Zod validation
+- Rate limiting on API routes
+- XSS prevention
+- HSTS (HTTPS enforcement)
+
+### Performance
+- Next.js Image optimization (WebP, AVIF)
+- Lazy loading components
+- Intersection Observer for animations
+- Optimized fonts (Inter, JetBrains Mono)
+- 90+ Lighthouse score target
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+
+- pnpm (recommended) or npm
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Run development server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+pnpm build
+pnpm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/                   # Next.js App Router
+├── components/            # React components
+├── hooks/                 # Custom React hooks
+├── lib/                   # Utilities & constants
+├── types/                 # TypeScript types
+├── middleware.ts          # Security middleware
+└── next.config.ts         # Next.js config
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Update your personal information in `lib/constants.ts`.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
