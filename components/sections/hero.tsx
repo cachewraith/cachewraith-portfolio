@@ -38,8 +38,8 @@ export function Hero() {
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             {/* Badge */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.5 }}
               className="mb-6"
             >
@@ -54,8 +54,8 @@ export function Hero() {
 
             {/* Heading */}
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
             >
@@ -67,8 +67,8 @@ export function Hero() {
 
             {/* Role with Icon */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex items-center gap-2 mb-6"
             >
@@ -80,8 +80,8 @@ export function Hero() {
 
             {/* Description */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-text-secondary text-lg max-w-xl mb-8 leading-relaxed"
             >
@@ -92,16 +92,16 @@ export function Hero() {
 
             {/* Tech Stack Pills */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.5, delay: 0.35 }}
               className="flex flex-wrap justify-center lg:justify-start gap-2 mb-8"
             >
               {techStack.map((tech, index) => (
                 <motion.span
                   key={tech.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ scale: 0.8 }}
+                  animate={{ scale: 1 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
                   className="px-3 py-1.5 text-xs font-medium rounded-full bg-bg-secondary border border-border/50 text-text-secondary hover:border-accent-primary/50 hover:text-accent-primary transition-all duration-300"
                 >
@@ -112,8 +112,8 @@ export function Hero() {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 mb-10"
             >
@@ -137,8 +137,8 @@ export function Hero() {
 
             {/* Social Links */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
               <SocialLinks />
@@ -147,8 +147,8 @@ export function Hero() {
 
           {/* Right Content - Code Window */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ x: 50 }}
+            animate={{ x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="hidden lg:block relative"
           >
@@ -193,8 +193,8 @@ export function Hero() {
 
             {/* Floating Stats Cards */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              animate={{ y: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
               className="absolute -bottom-6 -left-6 bg-card-bg border border-border/50 rounded-xl p-4 shadow-xl"
             >
@@ -210,8 +210,8 @@ export function Hero() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ y: -20 }}
+              animate={{ y: 0 }}
               transition={{ delay: 1, duration: 0.5 }}
               className="absolute -top-4 -right-4 bg-card-bg border border-border/50 rounded-xl p-4 shadow-xl"
             >
